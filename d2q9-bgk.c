@@ -52,6 +52,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <sys/resource.h>
 #include <sys/time.h>
 #include <time.h>
@@ -201,10 +202,6 @@ int timestep(const t_param params, t_speed *cells, t_speed *tmp_cells,
   for (int jj = 0; jj < params.ny; jj++) {
     for (int ii = 0; ii < params.nx; ii++) {
       propagate(ii, jj, params, cells, tmp_cells);
-    }
-  }
-  for (int jj = 0; jj < params.ny; jj++) {
-    for (int ii = 0; ii < params.nx; ii++) {
       if (obstacles[ii + jj * params.nx]) {
         rebound(ii, jj, params, cells, tmp_cells, obstacles);
       } else {
@@ -212,6 +209,7 @@ int timestep(const t_param params, t_speed *cells, t_speed *tmp_cells,
       }
     }
   }
+  memcpy(cells, tmp_cells, sizeof(t_speed) * params.nx * params.ny);
   return EXIT_SUCCESS;
 }
 
@@ -281,22 +279,19 @@ int rebound(int ii, int jj, const t_param params, t_speed *cells,
             t_speed *tmp_cells, int *obstacles) {
   /* called after propagate, so taking values from scratch space
   ** mirroring, and writing into main grid */
-  cells[ii + jj * params.nx].speeds[1] =
-      tmp_cells[ii + jj * params.nx].speeds[3];
-  cells[ii + jj * params.nx].speeds[2] =
-      tmp_cells[ii + jj * params.nx].speeds[4];
-  cells[ii + jj * params.nx].speeds[3] =
-      tmp_cells[ii + jj * params.nx].speeds[1];
-  cells[ii + jj * params.nx].speeds[4] =
-      tmp_cells[ii + jj * params.nx].speeds[2];
-  cells[ii + jj * params.nx].speeds[5] =
-      tmp_cells[ii + jj * params.nx].speeds[7];
-  cells[ii + jj * params.nx].speeds[6] =
-      tmp_cells[ii + jj * params.nx].speeds[8];
-  cells[ii + jj * params.nx].speeds[7] =
-      tmp_cells[ii + jj * params.nx].speeds[5];
-  cells[ii + jj * params.nx].speeds[8] =
-      tmp_cells[ii + jj * params.nx].speeds[6];
+  float *cell_speeds = tmp_cells[ii + jj * params.nx].speeds;
+  float temp1 = cell_speeds[1];
+  cell_speeds[1] = cell_speeds[3];
+  cell_speeds[3] = temp1;
+  float temp2 = cell_speeds[2];
+  cell_speeds[2] = cell_speeds[4];
+  cell_speeds[4] = temp2;
+  float temp5 = cell_speeds[5];
+  cell_speeds[5] = cell_speeds[7];
+  cell_speeds[7] = temp5;
+  float temp6 = cell_speeds[6];
+  cell_speeds[6] = cell_speeds[8];
+  cell_speeds[8] = temp6;
 
   return EXIT_SUCCESS;
 }
@@ -383,7 +378,7 @@ int collision(int ii, int jj, const t_param params, t_speed *cells,
 
   /* relaxation step */
   for (int kk = 0; kk < NSPEEDS; kk++) {
-    cells[ii + jj * params.nx].speeds[kk] =
+    tmp_cells[ii + jj * params.nx].speeds[kk] =
         tmp_cells[ii + jj * params.nx].speeds[kk] +
         params.omega * (d_equ[kk] - tmp_cells[ii + jj * params.nx].speeds[kk]);
   }
