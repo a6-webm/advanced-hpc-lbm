@@ -162,6 +162,9 @@ int main(int argc, char *argv[]) {
 
   for (int tt = 0; tt < params.maxIters; tt++) {
     timestep(params, cells, tmp_cells, obstacles);
+    t_speed *swap_pointer = tmp_cells;
+    tmp_cells = cells;
+    cells = swap_pointer;
     av_vels[tt] = av_velocity(params, cells, obstacles);
 #ifdef DEBUG
     printf("==timestep: %d==\n", tt);
@@ -196,6 +199,7 @@ int main(int argc, char *argv[]) {
   return EXIT_SUCCESS;
 }
 
+// TODO fuse av_velocity into this loop
 int timestep(const t_param params, t_speed *cells, t_speed *tmp_cells,
              int *obstacles) {
   accelerate_flow(params, cells, obstacles);
@@ -209,7 +213,6 @@ int timestep(const t_param params, t_speed *cells, t_speed *tmp_cells,
       }
     }
   }
-  memcpy(cells, tmp_cells, sizeof(t_speed) * params.nx * params.ny);
   return EXIT_SUCCESS;
 }
 
