@@ -1,12 +1,12 @@
 Running on host compute242.bc4.acrc.priv
-Time is Thu Feb 15 22:37:56 GMT 2024
+Time is Fri Feb 16 16:05:22 GMT 2024
 Directory is /user/home/sq21386/advanced-hpc-lbm
-Slurm job ID is 12318878
+Slurm job ID is 12322679
 This job runs on the following machines:
 compute242
 ==done==
 Reynolds number:		9.755046844482E+00
-Elapsed Init time:			0.000648 (s)
-Elapsed Compute time:			27.523409 (s)
+Elapsed Init time:			0.001235 (s)
+Elapsed Compute time:			28.020181 (s)
 Elapsed Collate time:			0.000000 (s)
-Elapsed Total time:			27.524057 (s)
+Elapsed Total time:			28.021416 (s)
