@@ -1,0 +1,6 @@
+rsync-excludes.txt
+.git
+d2q9-bgk
+check
+send.sh
+fetch.sh
