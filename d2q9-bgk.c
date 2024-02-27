@@ -155,11 +155,10 @@ int main(int argc, char *argv[]) {
   comp_tic = init_toc;
 
   for (int tt = 0; tt < params.maxIters; tt++) {
-    timestep(params, cells, tmp_cells, obstacles);
+    av_vels[tt] = timestep(params, cells, tmp_cells, obstacles);
     t_speed *swap_pointer = tmp_cells;
     tmp_cells = cells;
     cells = swap_pointer;
-    av_vels[tt] = av_velocity(params, cells, obstacles);
 #ifdef DEBUG
     printf("==timestep: %d==\n", tt);
     printf("av velocity: %.12E\n", av_vels[tt]);
@@ -342,7 +341,8 @@ float timestep(const t_param params, t_speed *cells, t_speed *tmp_cells,
   return tot_u / (float)tot_cells;
 }
 
-void accelerate_flow(const t_param params, t_speed *cells, int *obstacles) {
+inline void accelerate_flow(const t_param params, t_speed *cells,
+                            int *obstacles) {
   /* compute weighting factors */
   float w1 = params.density * params.accel / 9.f;
   float w2 = params.density * params.accel / 36.f;
