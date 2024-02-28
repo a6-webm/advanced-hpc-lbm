@@ -230,7 +230,6 @@ float timestep(const t_param params, float *restrict *restrict cells,
   __assume(params.nx % 64 == 0);
   __assume(params.ny % 64 == 0);
 
-  // #pragma omp simd collapse(2)
   for (int jj = 0; jj < params.ny; jj++) {
     for (int ii = 0; ii < params.nx; ii++) {
       // Propagate ------
@@ -301,9 +300,6 @@ float timestep(const t_param params, float *restrict *restrict cells,
         local_density += tmp_cells_6[ii + jj * params.nx];
         local_density += tmp_cells_7[ii + jj * params.nx];
         local_density += tmp_cells_8[ii + jj * params.nx];
-        // for (int kk = 0; kk < NSPEEDS; kk++) {
-        //   local_density += tmp_cells[kk][ii + jj * params.nx];
-        // }
 
         /* compute x velocity component */
         float u_x = (tmp_cells_1[ii + jj * params.nx] +
@@ -387,13 +383,6 @@ float timestep(const t_param params, float *restrict *restrict cells,
             params.omega * (d_equ[7] - tmp_cells_7[ii + jj * params.nx]);
         tmp_cells_8[ii + jj * params.nx] +=
             params.omega * (d_equ[8] - tmp_cells_8[ii + jj * params.nx]);
-        // for (int kk = 0; kk < NSPEEDS; kk++) {
-        //   tmp_cells[kk][ii + jj * params.nx] =
-        //       tmp_cells[kk][ii + jj * params.nx] +
-        //       params.omega * (d_equ[kk] - tmp_cells[kk][ii + jj *
-        //       params.nx]);
-        // }
-
         // ----------------
         ++tot_cells;
       }
