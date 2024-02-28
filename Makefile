@@ -2,8 +2,8 @@
 
 EXE=d2q9-bgk
 
-CC=gcc
-CFLAGS= -std=c99 -Wall -Ofast -march=native
+CC=icc
+CFLAGS= -std=c99 -Wall -Ofast -xHost -qopenmp -qopt-report=5
 LIBS = -lm
 
 FINAL_STATE_FILE=./final_state.dat
