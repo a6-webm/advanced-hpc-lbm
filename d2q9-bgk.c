@@ -229,7 +229,8 @@ float timestep(const t_param params, float *restrict *restrict cells,
 
   __assume(params.nx % 64 == 0);
   __assume(params.ny % 64 == 0);
-
+#pragma omp parallel for collapse(2) reduction(+ : tot_u)                      \
+    reduction(+ : tot_cells)
   for (int jj = 0; jj < params.ny; jj++) {
     for (int ii = 0; ii < params.nx; ii++) {
       // Propagate ------
