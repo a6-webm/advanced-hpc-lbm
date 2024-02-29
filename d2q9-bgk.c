@@ -94,8 +94,7 @@ int initialise(const char *paramfile, const char *obstaclefile, t_param *params,
 */
 float timestep(const t_param params, float *restrict *restrict cells,
                float **tmp_cells, const int *obstacles);
-void accelerate_flow(const t_param params, float *restrict *restrict cells,
-                     const int *obstacles);
+void accelerate_flow(const t_param params, float **cells, const int *obstacles);
 int write_values(const t_param params, float **cells, int *obstacles,
                  float *av_vels);
 
@@ -392,9 +391,29 @@ float timestep(const t_param params, float *restrict *restrict cells,
   return tot_u / (float)tot_cells;
 }
 
-inline void accelerate_flow(const t_param params,
-                            float *restrict *restrict cells,
+inline void accelerate_flow(const t_param params, float **cells,
                             const int *obstacles) {
+  float *restrict cells_0 = cells[0];
+  float *restrict cells_1 = cells[1];
+  float *restrict cells_2 = cells[2];
+  float *restrict cells_3 = cells[3];
+  float *restrict cells_4 = cells[4];
+  float *restrict cells_5 = cells[5];
+  float *restrict cells_6 = cells[6];
+  float *restrict cells_7 = cells[7];
+  float *restrict cells_8 = cells[8];
+  __assume_aligned(cells_0, 64);
+  __assume_aligned(cells_1, 64);
+  __assume_aligned(cells_2, 64);
+  __assume_aligned(cells_3, 64);
+  __assume_aligned(cells_4, 64);
+  __assume_aligned(cells_5, 64);
+  __assume_aligned(cells_6, 64);
+  __assume_aligned(cells_7, 64);
+  __assume_aligned(cells_8, 64);
+  __assume(params.nx % 64 == 0);
+  __assume(params.ny % 64 == 0);
+
   /* compute weighting factors */
   float w1 = params.density * params.accel / 9.f;
   float w2 = params.density * params.accel / 36.f;
@@ -406,17 +425,17 @@ inline void accelerate_flow(const t_param params,
     /* if the cell is not occupied and
     ** we don't send a negative density */
     if (!obstacles[ii + jj * params.nx] &&
-        (cells[3][ii + jj * params.nx] - w1) > 0.f &&
-        (cells[6][ii + jj * params.nx] - w2) > 0.f &&
-        (cells[7][ii + jj * params.nx] - w2) > 0.f) {
+        (cells_3[ii + jj * params.nx] - w1) > 0.f &&
+        (cells_6[ii + jj * params.nx] - w2) > 0.f &&
+        (cells_7[ii + jj * params.nx] - w2) > 0.f) {
       /* increase 'east-side' densities */
-      cells[1][ii + jj * params.nx] += w1;
-      cells[5][ii + jj * params.nx] += w2;
-      cells[8][ii + jj * params.nx] += w2;
+      cells_1[ii + jj * params.nx] += w1;
+      cells_5[ii + jj * params.nx] += w2;
+      cells_8[ii + jj * params.nx] += w2;
       /* decrease 'west-side' densities */
-      cells[3][ii + jj * params.nx] -= w1;
-      cells[6][ii + jj * params.nx] -= w2;
-      cells[7][ii + jj * params.nx] -= w2;
+      cells_3[ii + jj * params.nx] -= w1;
+      cells_6[ii + jj * params.nx] -= w2;
+      cells_7[ii + jj * params.nx] -= w2;
     }
   }
 }
@@ -571,6 +590,7 @@ int initialise(const char *paramfile, const char *obstaclefile, t_param *params,
   float w1 = params->density / 9.f;
   float w2 = params->density / 36.f;
 
+#pragma omp parallel for collapse(2)
   for (int jj = 0; jj < params->ny; jj++) {
     for (int ii = 0; ii < params->nx; ii++) {
       /* centre */
@@ -589,6 +609,7 @@ int initialise(const char *paramfile, const char *obstaclefile, t_param *params,
   }
 
   /* first set all cells in obstacle array to zero */
+#pragma omp parallel for collapse(2)
   for (int jj = 0; jj < params->ny; jj++) {
     for (int ii = 0; ii < params->nx; ii++) {
       (*obstacles_ptr)[ii + jj * params->nx] = 0;
