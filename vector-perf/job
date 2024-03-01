@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=d2q9-bgk-serial-perf
+#SBATCH --job-name=d2q9-bgk-vector-perf
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=2
 #SBATCH --cpus-per-task=1

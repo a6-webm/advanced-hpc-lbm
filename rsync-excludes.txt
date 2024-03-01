@@ -4,3 +4,4 @@ rsync-excludes.txt
 check
 send.sh
 fetch.sh
+report
