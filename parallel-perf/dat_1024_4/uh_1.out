@@ -5,3 +5,9 @@ Slurm job ID is 12380882
 This job runs on the following machines:
 compute243
 Threads: 1
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.052820 (s)
+Elapsed Compute time:			2128.624491 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			2128.677311 (s)
