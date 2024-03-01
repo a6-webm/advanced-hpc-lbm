@@ -1,0 +1,364 @@
+Running on host compute243.bc4.acrc.priv
+Time is Fri Mar 1 11:10:11 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380882
+This job runs on the following machines:
+compute243
+Threads: 1
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.052820 (s)
+Elapsed Compute time:			2128.624491 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			2128.677311 (s)
+Running on host compute521.bc4.acrc.priv
+Time is Fri Mar 1 11:09:11 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380881
+This job runs on the following machines:
+compute521
+Threads: 2
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.033046 (s)
+Elapsed Compute time:			1060.423235 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			1060.456281 (s)
+Running on host compute525.bc4.acrc.priv
+Time is Fri Mar 1 11:08:39 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380880
+This job runs on the following machines:
+compute525
+Threads: 3
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.027618 (s)
+Elapsed Compute time:			710.552638 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			710.580256 (s)
+Running on host compute523.bc4.acrc.priv
+Time is Fri Mar 1 11:06:40 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380879
+This job runs on the following machines:
+compute523
+Threads: 4
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.023217 (s)
+Elapsed Compute time:			530.709054 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			530.732271 (s)
+Running on host compute242.bc4.acrc.priv
+Time is Fri Mar 1 11:06:40 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380878
+This job runs on the following machines:
+compute242
+Threads: 5
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.021571 (s)
+Elapsed Compute time:			426.959599 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			426.981170 (s)
+Running on host compute244.bc4.acrc.priv
+Time is Fri Mar 1 11:04:41 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380877
+This job runs on the following machines:
+compute244
+Threads: 6
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.019145 (s)
+Elapsed Compute time:			353.631130 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			353.650275 (s)
+Running on host compute243.bc4.acrc.priv
+Time is Fri Mar 1 11:04:41 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380876
+This job runs on the following machines:
+compute243
+Threads: 7
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.019363 (s)
+Elapsed Compute time:			305.569743 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			305.589106 (s)
+Running on host compute521.bc4.acrc.priv
+Time is Fri Mar 1 11:04:41 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380875
+This job runs on the following machines:
+compute521
+Threads: 8
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.018917 (s)
+Elapsed Compute time:			265.987487 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			266.006404 (s)
+Running on host compute245.bc4.acrc.priv
+Time is Fri Mar 1 11:04:11 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380874
+This job runs on the following machines:
+compute245
+Threads: 9
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.018116 (s)
+Elapsed Compute time:			237.143875 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			237.161991 (s)
+Running on host compute523.bc4.acrc.priv
+Time is Fri Mar 1 11:02:40 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380873
+This job runs on the following machines:
+compute523
+Threads: 10
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.017058 (s)
+Elapsed Compute time:			212.812041 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			212.829099 (s)
+Running on host compute242.bc4.acrc.priv
+Time is Fri Mar 1 11:02:40 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380872
+This job runs on the following machines:
+compute242
+Threads: 11
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.017823 (s)
+Elapsed Compute time:			193.614509 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			193.632332 (s)
+Running on host compute521.bc4.acrc.priv
+Time is Fri Mar 1 11:01:40 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380871
+This job runs on the following machines:
+compute521
+Threads: 12
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.017507 (s)
+Elapsed Compute time:			177.803298 (s)
+Elapsed Collate time:			0.000001 (s)
+Elapsed Total time:			177.820806 (s)
+Running on host compute244.bc4.acrc.priv
+Time is Fri Mar 1 11:01:11 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380870
+This job runs on the following machines:
+compute244
+Threads: 13
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.016675 (s)
+Elapsed Compute time:			164.088251 (s)
+Elapsed Collate time:			0.000001 (s)
+Elapsed Total time:			164.104927 (s)
+Running on host compute243.bc4.acrc.priv
+Time is Fri Mar 1 11:01:11 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380869
+This job runs on the following machines:
+compute243
+Threads: 14
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.017493 (s)
+Elapsed Compute time:			152.588203 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			152.605696 (s)
+Running on host compute245.bc4.acrc.priv
+Time is Fri Mar 1 11:00:40 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380868
+This job runs on the following machines:
+compute245
+Threads: 15
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.016844 (s)
+Elapsed Compute time:			142.611695 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			142.628539 (s)
+Running on host compute523.bc4.acrc.priv
+Time is Fri Mar 1 10:59:40 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380867
+This job runs on the following machines:
+compute523
+Threads: 16
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.015861 (s)
+Elapsed Compute time:			133.126269 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			133.142130 (s)
+Running on host compute244.bc4.acrc.priv
+Time is Fri Mar 1 10:58:39 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380866
+This job runs on the following machines:
+compute244
+Threads: 17
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.016801 (s)
+Elapsed Compute time:			125.477220 (s)
+Elapsed Collate time:			0.000001 (s)
+Elapsed Total time:			125.494022 (s)
+Running on host compute243.bc4.acrc.priv
+Time is Fri Mar 1 10:58:39 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380865
+This job runs on the following machines:
+compute243
+Threads: 18
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.016216 (s)
+Elapsed Compute time:			118.594113 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			118.610329 (s)
+Running on host compute521.bc4.acrc.priv
+Time is Fri Mar 1 10:58:39 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380864
+This job runs on the following machines:
+compute521
+Threads: 19
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.018078 (s)
+Elapsed Compute time:			123.585279 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			123.603357 (s)
+Running on host compute245.bc4.acrc.priv
+Time is Fri Mar 1 10:57:40 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380863
+This job runs on the following machines:
+compute245
+Threads: 20
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.016527 (s)
+Elapsed Compute time:			106.799854 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			106.816381 (s)
+Running on host compute523.bc4.acrc.priv
+Time is Fri Mar 1 10:57:10 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380862
+This job runs on the following machines:
+compute523
+Threads: 21
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.016312 (s)
+Elapsed Compute time:			101.999076 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			102.015388 (s)
+Running on host compute521.bc4.acrc.priv
+Time is Fri Mar 1 10:56:40 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380861
+This job runs on the following machines:
+compute521
+Threads: 22
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.015896 (s)
+Elapsed Compute time:			97.422231 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			97.438127 (s)
+Running on host compute245.bc4.acrc.priv
+Time is Fri Mar 1 10:55:41 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380860
+This job runs on the following machines:
+compute245
+Threads: 23
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.018096 (s)
+Elapsed Compute time:			93.190617 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			93.208713 (s)
+Running on host compute243.bc4.acrc.priv
+Time is Fri Mar 1 10:55:41 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380859
+This job runs on the following machines:
+compute243
+Threads: 24
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.018219 (s)
+Elapsed Compute time:			89.023662 (s)
+Elapsed Collate time:			0.000001 (s)
+Elapsed Total time:			89.041882 (s)
+Running on host compute523.bc4.acrc.priv
+Time is Fri Mar 1 10:55:41 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380858
+This job runs on the following machines:
+compute523
+Threads: 25
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.015640 (s)
+Elapsed Compute time:			85.813011 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			85.828651 (s)
+Running on host compute245.bc4.acrc.priv
+Time is Fri Mar 1 10:54:10 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380857
+This job runs on the following machines:
+compute245
+Threads: 26
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.017683 (s)
+Elapsed Compute time:			82.098433 (s)
+Elapsed Collate time:			0.000001 (s)
+Elapsed Total time:			82.116117 (s)
+Running on host compute243.bc4.acrc.priv
+Time is Fri Mar 1 10:54:10 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380856
+This job runs on the following machines:
+compute243
+Threads: 27
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.017847 (s)
+Elapsed Compute time:			87.104824 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			87.122671 (s)
+Running on host compute523.bc4.acrc.priv
+Time is Fri Mar 1 10:52:41 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380855
+This job runs on the following machines:
+compute523
+Threads: 28
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.016940 (s)
+Elapsed Compute time:			85.111258 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			85.128198 (s)
