@@ -1,0 +1,34 @@
+Running on host compute242.bc4.acrc.priv
+Time is Fri Mar 1 09:30:10 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/serial-perf
+Slurm job ID is 12380626
+This job runs on the following machines:
+compute242
+vvvvvvvvvvvv 128x128 vvvvvvvvvvvv
+==done==
+Reynolds number:		9.757995605469E+00
+Elapsed Init time:			0.000649 (s)
+Elapsed Compute time:			21.679264 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			21.679913 (s)
+vvvvvvvvvvvv 128x256 vvvvvvvvvvvv
+==done==
+Reynolds number:		3.717262268066E+01
+Elapsed Init time:			0.001934 (s)
+Elapsed Compute time:			43.720203 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			43.722137 (s)
+vvvvvvvvvvvv 256x256 vvvvvvvvvvvv
+==done==
+Reynolds number:		1.006644153595E+01
+Elapsed Init time:			0.001613 (s)
+Elapsed Compute time:			175.305357 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			175.306970 (s)
+vvvvvvvvvvvv 1024x1024 vvvvvvvvvvvv
+==done==
+Reynolds number:		3.376931428909E+00
+Elapsed Init time:			0.012068 (s)
+Elapsed Compute time:			729.733520 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			729.745588 (s)
