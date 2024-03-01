@@ -1,0 +1,13 @@
+Running on host compute524.bc4.acrc.priv
+Time is Fri Mar 1 10:29:27 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/parallel-perf
+Slurm job ID is 12380819
+This job runs on the following machines:
+compute524
+Threads: 7
+==done==
+Reynolds number:		3.377344369888E+00
+Elapsed Init time:			0.019901 (s)
+Elapsed Compute time:			304.842943 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			304.862844 (s)
