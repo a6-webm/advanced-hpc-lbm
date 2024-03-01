@@ -1,0 +1,34 @@
+Running on host compute242.bc4.acrc.priv
+Time is Fri Mar 1 03:48:11 GMT 2024
+Directory is /user/home/sq21386/advanced-hpc-lbm/vector-perf
+Slurm job ID is 12380357
+This job runs on the following machines:
+compute242
+vvvvvvvvvvvv 128x128 vvvvvvvvvvvv
+==done==
+Reynolds number:		9.756036758423E+00
+Elapsed Init time:			0.000701 (s)
+Elapsed Compute time:			7.243187 (s)
+Elapsed Collate time:			0.000001 (s)
+Elapsed Total time:			7.243889 (s)
+vvvvvvvvvvvv 128x256 vvvvvvvvvvvv
+==done==
+Reynolds number:		3.716378402710E+01
+Elapsed Init time:			0.001145 (s)
+Elapsed Compute time:			17.537077 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			17.538222 (s)
+vvvvvvvvvvvv 256x256 vvvvvvvvvvvv
+==done==
+Reynolds number:		1.006104850769E+01
+Elapsed Init time:			0.003077 (s)
+Elapsed Compute time:			66.705520 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			66.708597 (s)
+vvvvvvvvvvvv 1024x1024 vvvvvvvvvvvv
+==done==
+Reynolds number:		3.376032590866E+00
+Elapsed Init time:			0.053355 (s)
+Elapsed Compute time:			336.093318 (s)
+Elapsed Collate time:			0.000000 (s)
+Elapsed Total time:			336.146673 (s)

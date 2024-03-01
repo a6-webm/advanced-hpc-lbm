@@ -4,7 +4,6 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=2
 #SBATCH --cpus-per-task=1
-#SBATCH --time=00:10:00
 #SBATCH --partition=teach_cpu
 #SBATCH --account=COMS031424
 #SBATCH --output=d2q9-bgk.out
@@ -20,10 +19,10 @@ echo `echo $SLURM_JOB_NODELIST | uniq`
 #! Run the executable
 export OMP_PLACES=cores OMP_PROC_BIND=spread
 for dim in 128 256 1024; do
-    echo "vvvvvvvvvvvv ${DIM}x${DIM} vvvvvvvvvvvv"
+    echo "vvvvvvvvvvvv ${dim}x${dim} vvvvvvvvvvvv"
     for i in $(seq 2 2 28); do
         export OMP_NUM_THREADS=$i
         echo "Threads: $i"
-        ./d2q9-bgk "../input/input_${DIM}x${DIM}.params" "../input/obstacles_${DIM}x${DIM}.dat"
+        ./d2q9-bgk "../input/input_${dim}x${dim}.params" "../input/obstacles_${dim}x${dim}.dat"
     done
 done
