@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=d2q9-bgk
+#SBATCH --job-name=d2q9-bgk-serial-perf
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=2
 #SBATCH --cpus-per-task=1
@@ -17,10 +17,13 @@ echo Slurm job ID is $SLURM_JOB_ID
 echo This job runs on the following machines:
 echo `echo $SLURM_JOB_NODELIST | uniq`
 
-export OMP_NUM_THREADS=28
-export OMP_PLACES=cores OMP_PROC_BIND=spread
 #! Run the executable
-./d2q9-bgk input_128x128.params obstacles_128x128.dat
-#./d2q9-bgk input_128x256.params obstacles_128x256.dat
-#./d2q9-bgk input_256x256.params obstacles_256x256.dat
-#./d2q9-bgk input_1024x1024.params obstacles_1024x1024.dat
+export OMP_PLACES=cores OMP_PROC_BIND=spread
+for dim in 128 256 1024; do
+    echo "vvvvvvvvvvvv ${DIM}x${DIM} vvvvvvvvvvvv"
+    for i in $(seq 2 2 28); do
+        export OMP_NUM_THREADS=$i
+        echo "Threads: $i"
+        ./d2q9-bgk "../input/input_${DIM}x${DIM}.params" "../input/obstacles_${DIM}x${DIM}.dat"
+    done
+done
