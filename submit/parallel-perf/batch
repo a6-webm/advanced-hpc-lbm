@@ -1,0 +1,18 @@
+#!/bin/bash
+
+for batch in 1 2 3 4; do
+    for i in $(seq 28 -1 1); do
+        export OMP_NUM_THREADS=$i
+        echo "Threads: $i"
+        sbatch --output="dat_1024_${batch}/uh_${i}.out" \
+            --job-name="d2q9-bgk-parallel-perf" \
+            --nodes=1 \
+            --ntasks-per-node=2 \
+            --cpus-per-task=1 \
+            --time="01:00:00" \
+            --partition=teach_cpu \
+            --account=COMS031424 \
+            --exclusive \
+            little_job
+    done
+done

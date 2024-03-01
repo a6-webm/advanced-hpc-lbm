@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo Running on host `hostname`
+echo Time is `date`
+echo Directory is `pwd`
+echo Slurm job ID is $SLURM_JOB_ID
+echo This job runs on the following machines:
+echo `echo $SLURM_JOB_NODELIST | uniq`
+
+export OMP_PLACES=cores OMP_PROC_BIND=spread
+echo "Threads: $OMP_NUM_THREADS"
+./d2q9-bgk "../input/input_1024x1024.params" "../input/obstacles_1024x1024.dat"

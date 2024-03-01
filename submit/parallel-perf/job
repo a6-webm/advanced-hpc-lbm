@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#SBATCH --job-name=d2q9-bgk-parallel-perf
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=2
+#SBATCH --cpus-per-task=1
+#SBATCH --time=04:00:00
+#SBATCH --partition=teach_cpu
+#SBATCH --account=COMS031424
+#SBATCH --output=d2q9-bgk.out
+#SBATCH --exclusive
+
+echo Running on host `hostname`
+echo Time is `date`
+echo Directory is `pwd`
+echo Slurm job ID is $SLURM_JOB_ID
+echo This job runs on the following machines:
+echo `echo $SLURM_JOB_NODELIST | uniq`
+
+#! Run the executable
+export OMP_PLACES=cores OMP_PROC_BIND=spread
+for dim in 128 256 1024; do
+    echo "vvvvvvvvvvvv ${dim}x${dim} vvvvvvvvvvvv"
+    for i in $(seq 1 28); do
+        export OMP_NUM_THREADS=$i
+        echo "Threads: $i"
+        ./d2q9-bgk "../input/input_${dim}x${dim}.params" "../input/obstacles_${dim}x${dim}.dat"
+    done
+done
